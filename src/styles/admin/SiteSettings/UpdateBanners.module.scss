@@ -1,0 +1,141 @@
+@use "../../variables" as *;
+
+.updateBannersContainer {
+  @apply w-full lg:w-[70%] flex items-center justify-center h-auto lg:p-20;
+
+  .innerBox {
+    width: 100%;
+    background-color: $updateBannersBg;
+    padding: 20px;
+    border-radius: $updateBannersBorderRadius;
+    box-shadow: 0 8px 16px $updateBannersShadowColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $updateBannersTitleColor;
+      margin-bottom: 10px;
+    }
+
+    .infoText {
+      font-size: 1rem;
+      color: $updateBannersInfoTextColor;
+      margin-bottom: 20px;
+    }
+
+    .errorText {
+      color: $updateBannersErrorColor;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .successText {
+      color: $updateBannersSuccessColor;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .photoGridContainer {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      height: 30rem;
+      margin-bottom: 20px;
+
+      .gridItem {
+        flex-grow: 1;
+        background-color: $updateBannersGridItemBg;
+        border-radius: $updateBannersBorderRadius;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 2px dashed $updateBannersGridItemBorderColor;
+        background-size: cover;
+        background-position: center;
+
+        &.drag {
+          background-color: lightgray;
+          border-color: blue;
+        }
+
+        &.topCenter {
+          grid-column: 2 / 3;
+          grid-row: 1 / 2;
+        }
+
+        .removeIcon {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          background-color: $updateBannersRemoveIconBg;
+          color: $updateBannersErrorColor;
+          border-radius: 50%;
+          padding: 4px;
+          cursor: pointer;
+          font-size: 1rem;
+          box-shadow: 0 2px 4px $updateBannersRemoveIconShadowColor;
+          z-index: 2;
+        }
+
+        input[type="file"] {
+          position: absolute;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          z-index: 1;
+        }
+
+        .uploadPlaceholder {
+          font-size: 1.2rem;
+          color: $updateBannersUploadPlaceholderColor;
+          text-align: center;
+        }
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      gap: 10px;
+
+      .clearButton {
+        background-color: $updateBannersClearButtonColor;
+        color: $updateBannersClearButtonTextColor;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: $updateBannersBorderRadius;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($updateBannersClearButtonColor, 10%);
+        }
+      }
+
+      .updateButton {
+        background-color: $updateBannersPrimaryColor;
+        color: $updateBannersUpdateButtonTextColor;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: $updateBannersBorderRadius;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: lighten($updateBannersPrimaryColor, 10%);
+        }
+      }
+    }
+  }
+}

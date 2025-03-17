@@ -1,0 +1,69 @@
+# Node.js bağımlılıkları
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Next.js derleme dosyaları
+.next/
+out/
+.cache/
+
+# TypeScript derleme çıktıları
+dist/
+*.tsbuildinfo
+
+# Prisma veritabanı dosyaları ve cache
+prisma/dev.db
+prisma/dev.db-journal
+prisma/migrations/
+
+# PM2 log ve dump dosyaları
+pm2.log
+pm2.pid
+dump.pm2
+
+# Çalışma dosyaları ve geçici klasörler
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.bak
+*.swp
+*.swo
+*.swn
+
+# Ortam değişkenleri (gizli bilgiler)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# MacOS ve Linux için sistem dosyaları
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+Thumbs.db
+
+# Log dosyaları
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build araçları ve bağımlılıklar
+coverage/
+.jest/
+.eslintcache
+stylelintcache
+.postcss-cache/
+tailwind.config.js
+postcss.config.js
+
+# Diğer IDE konfigürasyonları
+*.sublime-workspace
+*.sublime-project
+*.iml
+*.idea/
+*.vscode/

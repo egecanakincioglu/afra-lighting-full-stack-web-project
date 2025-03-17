@@ -1,0 +1,176 @@
+@use "../../variables.scss" as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.container {
+  min-width: 300px;
+  background-color: $googleAdsStatsBg;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px $googleAdsStatsShadow;
+  padding: 20px;
+  margin: 0 auto;
+  width: 85%;
+  transform: translateX(7%);
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1024px) {
+    transform: translateX(0%);
+    min-height: 400px;
+    width: 90%;
+    min-height: 400px;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    padding: 15px;
+    min-height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    width: 80%;
+    padding: 10px;
+    min-height: 250px;
+  }
+
+  @media (max-width: 380px) {
+    width: 40%;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .title {
+      font-size: 1.8rem;
+      color: $googleAdsStatsTitle;
+      font-weight: 600;
+
+      @media (max-width: 768px) {
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1rem;
+      }
+    }
+
+    .refreshButton {
+      background-color: $googleAdsStatsRefreshButtonBg;
+      color: $googleAdsStatsRefreshButton;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $googleAdsStatsRefreshButtonHover;
+      }
+
+      @media (max-width: 768px) {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+
+      @media (max-width: 480px) {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .loadingContainer,
+  .errorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .loadingContainer p {
+    font-size: 1.2rem;
+    color: $googleAdsStatsLoadingText;
+  }
+
+  .errorContainer {
+    .errorTitle {
+      font-size: 1.6rem;
+      color: $googleAdsStatsErrorTitle;
+      margin-bottom: 10px;
+    }
+
+    .errorMessage {
+      font-size: 1rem;
+      color: $googleAdsStatsErrorMessage;
+    }
+
+    a {
+      color: $googleAdsStatsErrorLink;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .tableContainer {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 400px;
+
+    @media (max-width: 768px) {
+      max-height: none;
+    }
+
+    table {
+      width: 100%;
+      min-width: 800px;
+      border-collapse: collapse;
+
+      th,
+      td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid $googleAdsStatsItemBorder;
+
+        @media (max-width: 768px) {
+          padding: 10px;
+          font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+          padding: 8px;
+          font-size: 0.8rem;
+        }
+      }
+
+      th {
+        background-color: $googleAdsStatsItemHeaderBg;
+        color: $googleAdsStatsItemHeader;
+        font-weight: bold;
+      }
+
+      td {
+        color: $googleAdsStatsItemData;
+      }
+
+      tr:hover {
+        background-color: $googleAdsStatsRowBg;
+      }
+    }
+  }
+}

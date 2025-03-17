@@ -1,0 +1,122 @@
+@use "../variables.scss" as *;
+
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 100%;
+  position: relative;
+  margin: 20px auto;
+  transform: translateX(6%);
+
+  @media (max-width: 1024px) {
+    max-width: 90%;
+    margin: 0 auto;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 768px) {
+    max-width: 80%;
+    padding: 15px;
+    box-shadow: none;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+  }
+}
+
+.title {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $visitorStatsTitle;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+}
+
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.chartBox {
+  margin-top: 10px;
+  padding: 40px;
+  border-radius: 8px;
+  aspect-ratio: 1/1;
+  width: 100%;
+  max-width: 480px;
+  max-height: 480px;
+  box-shadow: 0 4px 12px $visitorStatsChartBoxShadow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+
+  @media (max-width: 1024px) {
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 350px;
+    max-height: 350px;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    max-width: none;
+    padding: 15px;
+    box-shadow: none;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 350px;
+    max-height: 350px;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 380px) {
+    width: 60%;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .chartTitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: $visitorStatsChartTitle;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
+  }
+}

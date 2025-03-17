@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option optimize_for = CODE_SIZE;
+
+message UploadPostFile {
+  optional bytes file = 1;
+  string category = 2;
+  uint32 index = 3;
+  map<string, string> metadata = 4;
+}
+
+message UploadPostRequest {
+  repeated UploadPostFile files = 1;
+}
+
+message UploadPatchFile {
+  string id = 1;
+  optional bytes file = 2;
+  optional uint32 index = 3;
+  map<string, string> metadata = 4;
+}
+
+message UploadPatchRequest {
+  repeated UploadPatchFile files = 1;
+}

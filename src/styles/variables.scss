@@ -1,0 +1,541 @@
+// General
+
+$containerWidth: 70%;
+
+// MainPage
+
+$mainPageBg: #f5f5f5;
+
+// Banner
+
+$bannerSquareBg: #e2e8f0;
+$bannerItem1Bg: #f9a22e;
+$bannerSideBg: #d1d5db;
+$bannerHoverShadow: rgba(0, 0, 0, 0.2);
+
+// ContactForm
+
+$contactFormPrimaryColor: #ff7f0e;
+$contactFormSecondaryColor: #e96e0a;
+$contactFromInfoTitleColor: #333;
+$contactFromInfoTextColor: #666;
+$contactFormListItemColor: #333;
+$contactFormListItemIconColor: #f9a22e;
+$contactFormListItemLinkColor: #333;
+$contactFormListItemLinkHoverColor: #f9a22e;
+$contactFormInputBg: #f9f9f9;
+$contactFormInputBorder: #ddd;
+$contactFormInputFocusBorder: #ff7f0e;
+$contactFormSubmitButtonBg: #ff7f0e;
+$contactFormSubmitButtonHoverBg: #e96e0a;
+$contactFormInputTextColor: #333;
+$contactFormSubmitButtonTextColor: #fff;
+
+// Footer
+
+$footerContColor: #333;
+$footerLineColor: rgb(203, 190, 190);
+$footerAddressColor: #666;
+$footerSocialLinkColor: #666;
+$footerSocialLinkHoverColor: #f9a22e;
+$footerBottomItemColor: #666;
+$footerBottomItemHoverColor: #e27d1f;
+$footerBottomCreditColor: #666;
+$footerBottomCopyrightColor: #666;
+$footerBottomItemColor: #999;
+$footerBottomItemHoverColor: #555;
+
+// Header
+
+$headerContColor: #333;
+$headerContBg: #ffffff;
+$headerSearchBarBorderColor: #ccc;
+$headerSearchBarBg: #fff;
+$headerSearchBarInputColor: #333;
+$headerSearchBarButtonBg: #f9a22e;
+$headerSearchBarButtonColor: #fff;
+$headerSearchBarButtonHoverBg: #f9a22e;
+$headerIconLinkButtonColor: #333;
+$headerIconLinkButtonHoverColor: #f9a22e;
+$headerNavLinkLinkColor: #333;
+$headerNavLinkLinkHoverColor: #f9a22e;
+$headerNavLinkSubMenuBg: #fff;
+$headerNavLinkSubMenuShadow: rgba(0, 0, 0, 0.1);
+$headerNavLinkSubMenuLinkColor: #333;
+$headerNavLinkSubMenuLinkHoverColor: #f9a22e;
+
+// Highlights
+
+$hgProductBg: #f5f5f5;
+$hgProductHoverShadow: rgba(0, 0, 0, 0.2);
+$hgOldPriceColor: #888;
+$hgCurrentPriceColor: #000;
+$hgAdContentColor: #ffffff;
+$hgAdButtonBg: #ffd700;
+$hgAdButtonColor: #000;
+$hgAdButtonHoverBg: #e6c200;
+
+// Intro
+
+$introButtonColor: white;
+$introButtonHoverBg: rgba(0, 0, 0, 0.8);
+$introDotBg: #bbb;
+$introDotActiveBg: #717171;
+
+// PDF
+
+$pdfBg: #f5f5f5;
+$pdfFlipPageImgShadow: rgba(0, 0, 0, 0.2);
+
+// Title
+
+$titleBgTextColor: rgba(0, 0, 0, 0.05);
+$titleForeTextColor: #333;
+$titleForeTextAnimationBg: #f9a22e;
+
+// WorkingAreas
+
+$workingAreasBg: #f4f6f9;
+$workingAreasBoxBg: #ffffff;
+$workingAreasBoxShadow: rgba(0, 0, 0, 0.05);
+$workingAreasBoxHoverShadow: rgba(0, 0, 0, 0.15);
+$workingAreasBoxTitleColor: #333;
+$workingAreasBoxTextColor: #666;
+$workingAreasRightBorderColor: #f9a22e;
+$workingAreasLeftBorderColor: #f9a22e;
+
+// Information
+
+$informationPrimaryColor: #2c3e50;
+$informationSecondaryColor: #4a90e2;
+$informationTextColor: #333;
+$informationBackgroundColor: #f5f7fa;
+$informationBoxColor: #fff;
+$informationShadowColor: rgba(0, 0, 0, 0.2);
+$informationVersionBoxColor: #1a2d3d;
+$informationWhiteColor: #fff;
+$informationDarkTextColor: darken($informationTextColor, 15%);
+$informationDarkerTextColor: darken($informationTextColor, 25%);
+$informationLightSecondaryColor: lighten($informationSecondaryColor, 10%);
+
+// Step1
+
+$step1PrimaryColor: #2c3e50;
+$step1SecondaryColor: #4a90e2;
+$step1TextColor: #333;
+$step1BackgroundColor: #f5f7fa;
+$step1BoxColor: #fff;
+$step1ShadowColor: rgba(0, 0, 0, 0.2);
+$step1VersionBoxColor: #1a2d3d;
+$step1RejectButtonColor: #e74c3c;
+$step1WhiteColor: #fff;
+
+// Step2
+
+$step2PrimaryColor: #2c3e50;
+$step2SecondaryColor: #4a90e2;
+$step2TextColor: #333;
+$step2BackgroundColor: #f5f7fa;
+$step2BoxColor: #fff;
+$step2ShadowColor: rgba(0, 0, 0, 0.2);
+$step2VersionBoxColor: #1a2d3d;
+$step2WhiteColor: #fff;
+$step2LightenedBoxColor: lighten($step2BoxColor, 5%);
+$step2DarkenedShadowColor: darken($step2ShadowColor, 10%);
+
+// Step3
+
+$step3PrimaryColor: #2c3e50;
+$step3SecondaryColor: #4a90e2;
+$step3TextColor: #333;
+$step3BackgroundColor: #f5f7fa;
+$step3BoxColor: #fff;
+$step3ShadowColor: rgba(0, 0, 0, 0.2);
+$step3VersionBoxColor: #1a2d3d;
+$step3ErrorColor: #e74c3c;
+$step3WhiteColor: #fff;
+$step3LightenedBoxColor: lighten($step3BoxColor, 5%);
+$step3DarkenedShadowColor: darken($step3ShadowColor, 10%);
+
+// Step4
+
+$step4PrimaryColor: #2c3e50;
+$step4SecondaryColor: #4a90e2;
+$step4TextColor: #333;
+$step4BackgroundColor: #f5f7fa;
+$step4BoxColor: #fff;
+$step4ShadowColor: rgba(0, 0, 0, 0.2);
+$step4VersionBoxColor: #1a2d3d;
+$step4CompletedColor: #27ae60;
+$step4WhiteColor: #fff;
+$step4LightenedPrimaryColor: lighten($step4PrimaryColor, 15%);
+$step4LightenedSecondaryColor: lighten($step4SecondaryColor, 10%);
+
+// Contact
+
+$contactBg: #f5f5f5;
+
+// WorkingAreas
+
+$workingAreasPrimaryColor: #000000;
+$workingAreasSecondaryTextColor: #666;
+$workingAreasBg: #f5f5f5;
+$workingAreasCardBoxShadow: rgba(0, 0, 0, 0.1);
+$workingAreasCardBoxHoverShadow: rgba(0, 0, 0, 0.15);
+$workingAreasCardBg: #ffffff;
+
+// Vision
+
+$visionBg: #f5f5f5;
+$visionTextColor: #666;
+
+// TermsOfService
+
+$termsOfServicePrimaryColor: #333;
+$termsOfServiceSecondaryColor: #666;
+$termsOfServiceLinkHoverColor: darken($termsOfServicePrimaryColor, 10%);
+
+// Services
+
+$servicesPrimaryColor: #666;
+$servicesSecondaryTextColor: #666;
+$servicesBg: #f5f5f5;
+$servicesTitle: #000000;
+$servicesCardBg: white;
+$servicesCardBoxShadow: rgba(0, 0, 0, 0.1);
+$servicesCardHoverShadow: rgba(0, 0, 0, 0.15);
+$servicesReadMore: white;
+$servicesReadMoreHoverBg: darken($servicesPrimaryColor, 10%);
+$serviesModalOverlayBg: rgba(0, 0, 0, 0.6);
+$serviesModalContentBg: white;
+$servicesModalContentBoxShadow: rgba(0, 0, 0, 0.2);
+
+// Privacy
+
+$privacyPrimaryColor: #333;
+$privacySecondaryColor: #666;
+
+// About
+
+$aboutContainerBg: #f5f5f5;
+$aboutText: #666;
+
+// Loading
+
+$loadingBg: #f5f5f5;
+$loadingBarContainerBg: #e0e0e0;
+$loadingBarBg: #3b82f6;
+
+// DASHBOARD
+
+// VisitorStats
+
+$visitorStatsTitle: #333;
+$visitorStatsChartBoxShadow: rgba(0, 0, 0, 0.2);
+$visitorStatsChartTitle: #555;
+
+// Support
+
+$supportOuterBoxBg: #fff;
+$supportTitle: #333;
+$supportInfoText: #666;
+$supportCardBg: #f5f5f5;
+$supportCard: #333;
+$supportCardHoverShadow: rgba(0, 0, 0, 0.2);
+$supportCardTextColor: #666;
+
+// Messages
+
+$messagesBg: #fff;
+$messagesShadow: rgba(0, 0, 0, 0.2);
+$messagesTitle: #333;
+$messagesItemBg: #f7f7f7;
+$messagesItemShadow: rgba(0, 0, 0, 0.2);
+$messagesItemText: #555;
+$messagesItemTextEmphasis: #333;
+$messagesReplyButtonBg: #f9a22e;
+$messagesReplyButton: #fff;
+$messagesReplyButtonHoverBg: #f38e0a;
+$messagesDeleteButtonBg: #dc3545;
+$messagesDeleteButton: #fff;
+$messagesDeleteButtonHoverBg: #b02a37;
+
+// Login
+
+$loginBackgroundColor: #f5f7fa;
+$loginBoxColor: #ffffff;
+$loginPrimaryColor: #2c3e50;
+$loginButtonColor: #4a90e2;
+$loginButton: #ffffff;
+$loginTextColor: #333333;
+$loginInputBackground: #e8ecf1;
+$loginBoxShadowColor: rgba(0, 0, 0, 0.15);
+$loginFooterBottomCreditColor: #7a8a99;
+$loginErrorColor: #e74c3c;
+$loginSuccessColor: #27ae60;
+
+// DashboardFooter
+
+$dashboardFooterBg: #f5f5f5;
+$dashboardFooterBorderTop: #ddd;
+$dashboardFooterItem: #333;
+
+// FirstLogin
+
+$firstLoginBackgroundColor: #f5f7fa;
+$firstLoginBoxColor: #ffffff;
+$firstLoginPrimaryColor: #2c3e50;
+$firstLoginButtonColor: #4a90e2;
+$firstLoginButton: #ffffff;
+$firstLoginTextColor: #333333;
+$firstLoginInputBackground: #e8ecf1;
+$firstLoginBoxShadowColor: rgba(0, 0, 0, 0.15);
+$firstLoginErrorColor: #e74c3c;
+$firstLoginSuccessColor: #27ae60;
+
+// AdminNavbar
+
+$adminNavbarBackgroundColor: #2c3e50;
+$adminNavbarShadow: rgba(0, 0, 0, 0.1);
+$adminNavbarMenuHoverColor: #34495e;
+$adminNavbarTextColor: #ecf0f1;
+
+// UpdateWorkingAreas
+
+$updateWABg: #fff;
+$updateWATitle: #333;
+$updateWAPrimaryColor: #f9a22e;
+$updateWAErrorColor: #e74c3c;
+$updateWAShadowColor: rgba(0, 0, 0, 0.2);
+$updateWABorderRadius: 10px;
+$updateWATextColor: #666;
+$updateWAHoverBackground: #f7f7f7;
+$updateWAGridItemBg: #ececec;
+$updateWAGridItemBorder: #ccc;
+$updateWARemoveIconBg: #fff;
+$updateWAUploadColor: #888;
+$updateWAUploadBorderColor: #ccc;
+$updateWATitleInputBorder: #ccc;
+$updateWADescriptionInputBorder: #ccc;
+$updateWAClearButton: #fff;
+$updateWAUpdateButton: #fff;
+
+// UpdateVision
+
+$updateVisionBg: #fff;
+$updateVisionTitle: #333;
+$updateVisionInputBorder: #ccc;
+$updateVisionPrimaryColor: #f9a22e;
+$updateVisionErrorColor: #e74c3c;
+$updateVisionSuccessColor: #27ae60;
+$updateVisionTextColor: #666;
+$updateVisionShadowColor: rgba(0, 0, 0, 0.1);
+$updateVisionBorderRadius: 10px;
+$updateVisionUpdateButton: #fff;
+
+// UpdateAbout
+
+$updateAboutBg: #fff;
+$updateAboutTitle: #333;
+$updateAboutInputBorder: #ccc;
+$updateAboutUpdateButton: #fff;
+$updateAboutPrimaryColor: #f9a22e;
+$updateAboutErrorColor: #e74c3c;
+$updateAboutSuccessColor: #27ae60;
+$updateAboutTextColor: #666;
+$updateAboutShadowColor: rgba(0, 0, 0, 0.1);
+$updateAboutBorderRadius: 10px;
+
+// UpdateFavorites
+
+$updateFavoritesBg: #fff;
+$updateFavoritesTitle: #333;
+$updateFavoritesGridItemBg: #ececec;
+$updateFavoritesGridItemBorder: #ccc;
+$updateFavoritesPrimaryColor: #f9a22e;
+$updateFavoritesErrorColor: #e74c3c;
+$updateFavoritesShadowColor: rgba(0, 0, 0, 0.1);
+$updateFavoritesBorderRadius: 10px;
+$updateFavoritesTextColor: #666;
+$updateFavoritesHoverBackground: #f7f7f7;
+$updateFavoritesRemoveIconBg: #fff;
+$updateFavoritesUpload: #888;
+$updateFavoritesUploadBorder: #ccc;
+$updateFavoritesProductNameBorder: #ccc;
+$updateFavoritesClearButton: #fff;
+$updateFavoritesUpdateButton: #fff;
+
+// UpdateBanners
+
+$updateBannersBg: #fff;
+$updateBannersTitle: #000;
+$updateBannerInfoText: #666;
+$updateBannersGridItemBg: #ececec;
+$updateBannersGridItemBorder: #ccc;
+$updateBannersRemoveIconBg: #fff;
+$updateBannersRemoveIconShadow: rgba(0, 0, 0, 0.2);
+$updateBannersClearButton: #fff;
+$updateBannersUpdateButton: #fff;
+$updateBannersPrimaryColor: #f9a22e;
+$updateBannersErrorColor: #e74c3c;
+$updateBannersSuccessColor: #27ae60;
+$updateBannersClearButtonColor: #e74c3c;
+$updateBannersShadowColor: rgba(0, 0, 0, 0.1);
+$updateBannersBorderRadius: 10px;
+$updateBannersTitleColor: #000;
+$updateBannersInfoTextColor: #666;
+$updateBannersGridItemBorderColor: #ccc;
+$updateBannersRemoveIconShadowColor: rgba(0, 0, 0, 0.2);
+$updateBannersClearButtonTextColor: #fff;
+$updateBannersUpdateButtonTextColor: #fff;
+$updateBannersUploadPlaceholderColor: #888;
+
+// UpdateAds
+
+$updateAdsPrimaryColor: #333;
+$updateAdsSecondaryColor: #f9a22e;
+$updateAdsErrorColor: #e74c3c;
+$updateAdsTextColor: #666;
+$updateAdsBoxColor: #fff;
+$updateAdsShadowColor: rgba(0, 0, 0, 0.1);
+$updateAdsBackgroundHover: #f7f7f7;
+$updateAdsBorderDashed: 2px dashed #ccc;
+$updateAdsClearButton: #fff;
+$updateAdsUpdateButton: #fff;
+
+// UpdateServices
+
+$updateServicesPrimaryColor: #333;
+$updateServicesSecondaryColor: #f9a22e;
+$updateServicesErrorColor: #e74c3c;
+$updateServicesTextColor: #666;
+$updateServicesBoxColor: #fff;
+$updateServicesShadowColor: rgba(0, 0, 0, 0.2);
+$updateServicesBackgroundHover: #f7f7f7;
+$updateServicesBorderDashed: 2px dashed #ccc;
+$updateServicesTitleInputBorder: #ccc;
+$updateServicesDescriptionInputBorder: #ccc;
+$updateServicesDetailedInputBorder: #ccc;
+$updateServicesClearButton: #fff;
+$updateServicesUpdateButton: #fff;
+
+// UpdateCatalog
+
+$updateCatalogPrimaryColor: #333;
+$updateCatalogSecondaryColor: #f9a22e;
+$updateCatalogErrorColor: #e74c3c;
+$updateCatalogSuccessColor: #27ae60;
+$updateCatalogTextColor: #666;
+$updateCatalogBoxColor: #fff;
+$updateCatalogShadowColor: rgba(0, 0, 0, 0.1);
+$updateCatalogBackgroundHover: #f7f7f7;
+$updateCatalogUploadAreaBorder: #ccc;
+$updateCatalogUpdateButton: #fff;
+
+// GoogleAds
+
+$googleAdsPrimaryColor: #2c3e50;
+$googleAdsSecondaryColor: #f9a22e;
+$googleAdsTextColor: #333;
+$googleAdsBoxColor: #fff;
+$googleAdsShadowColor: rgba(0, 0, 0, 0.2);
+$googleAdsErrorColor: #e74c3c;
+$googleAdsSuccessColor: #27ae60;
+$googleAdsTestButton: #fff;
+$googleAdsSaveButton: #fff;
+
+// GoogleAdsStats
+
+$googleAdsStatsBg: #ffffff;
+$googleAdsStatsShadow: rgba(0, 0, 0, 0.2);
+$googleAdsStatsTitle: #333;
+$googleAdsStatsRefreshButtonBg: #f9a22e;
+$googleAdsStatsRefreshButton: #fff;
+$googleAdsStatsRefreshButtonHover: #f38e0a;
+$googleAdsStatsLoadingText: #333;
+$googleAdsStatsErrorTitle: #e74c3c;
+$googleAdsStatsErrorMessage: #555;
+$googleAdsStatsErrorLink: #f9a22e;
+$googleAdsStatsItemBorder: #ddd;
+$googleAdsStatsItemHeaderBg: #f9a22e;
+$googleAdsStatsItemHeader: #fff;
+$googleAdsStatsItemData: #333;
+$googleAdsStatsRowBg: #f1f1f1;
+
+// UpdateSocial
+
+$updateSocialPrimaryColor: #2c3e50;
+$updateSocialSecondaryColor: #f9a22e;
+$updateSocialTextColor: #333;
+$updateSocialBoxColor: #fff;
+$updateSocialShadowColor: rgba(0, 0, 0, 0.2);
+$updateSocialErrorColor: #e74c3c;
+$updateSocialSuccessColor: #27ae60;
+$updateSocialUpdateButton: #fff;
+
+// UpdateName
+
+$updateNamePrimaryColor: #2c3e50;
+$updateNameSecondaryColor: #f9a22e;
+$updateNameTextColor: #333;
+$updateNameBoxColor: #fff;
+$updateNameShadowColor: rgba(0, 0, 0, 0.2);
+$updateNameErrorColor: #e74c3c;
+$updateNameSuccessColor: #27ae60;
+$updateNameInputBorderColor: darken($updateNameShadowColor, 10%);
+$updateNameInputBg: lighten($updateNameBoxColor, 5%);
+$updateNameUpdateButtonTextColor: #fff;
+
+// UpdateLogo
+
+$updateLogoPrimaryColor: #f9a22e;
+$updateLogoSecondaryColor: #ff9100;
+$updateLogoTextColor: #333;
+$updateLogoBackgroundColor: #fff;
+$updateLogoShadowColor: rgba(0, 0, 0, 0.2);
+$updateLogoErrorColor: #ff0000;
+$updateLogoSuccessColor: #28a745;
+$updateLogoRemoveIconBg: #fff;
+$updateLogoRemoveIconColor: #ff0000;
+$updateLogoCheckIconColor: #28a745;
+$updateLogoProgressBarBg: lighten($updateLogoBackgroundColor, 10%);
+$updateLogoUploadButtonTextColor: #fff;
+
+// UpdateContact
+
+$updateContactPrimaryColor: #2c3e50;
+$updateContactSecondaryColor: #f9a22e;
+$updateContactTextColor: #333;
+$updateContactBoxColor: #fff;
+$updateContactShadowColor: rgba(0, 0, 0, 0.2);
+$updateContactErrorColor: #e74c3c;
+$updateContactSuccessColor: #27ae60;
+$updateContactInputBorderColor: darken($updateContactShadowColor, 10%);
+$updateContactInputBg: lighten($updateContactBoxColor, 5%);
+$updateContactUpdateButtonTextColor: #fff;
+
+// UpdateUser
+
+$updateUserPrimaryColor: #2c3e50;
+$updateUserSecondaryColor: #f9a22e;
+$updateUserTextColor: #333;
+$updateUserBoxColor: #fff;
+$updateUserShadowColor: rgba(0, 0, 0, 0.2);
+$updateUserErrorColor: #e74c3c;
+$updateUserSuccessColor: #27ae60;
+$updateUserInputBorderColor: darken($updateUserShadowColor, 10%);
+$updateUserInputBg: lighten($updateUserBoxColor, 5%);
+$updateUserUpdateButtonTextColor: #fff;
+
+// UpdatePassword
+
+$updatePasswordPrimaryColor: #2c3e50;
+$updatePasswordSecondaryColor: #f9a22e;
+$updatePasswordTextColor: #333;
+$updatePasswordBoxColor: #fff;
+$updatePasswordShadowColor: rgba(0, 0, 0, 0.2);
+$updatePasswordErrorColor: #e74c3c;
+$updatePasswordSuccessColor: #27ae60;
+$updatePasswordInputBorderColor: darken($updatePasswordShadowColor, 10%);
+$updatePasswordInputBg: lighten($updatePasswordBoxColor, 5%);
+$updatePasswordUpdateButtonTextColor: #fff;

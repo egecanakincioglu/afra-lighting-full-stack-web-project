@@ -1,0 +1,119 @@
+@use "../../variables.scss" as *;
+
+.updateNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+
+  .innerBox {
+    width: 100%;
+    max-width: 600px;
+    background-color: $updateNameBoxColor;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px $updateNameShadowColor;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: $updateNamePrimaryColor;
+      margin-bottom: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      color: $updateNameTextColor;
+      margin-bottom: 1.5rem;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid $updateNameInputBorderColor;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      background-color: $updateNameInputBg;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: $updateNameSecondaryColor;
+      }
+
+      @media (max-width: 480px) {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    .errorText {
+      display: block;
+      font-size: 0.9rem;
+      color: $updateNameErrorColor;
+      margin-bottom: 1rem;
+
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .successText {
+      display: block;
+      font-size: 0.9rem;
+      color: $updateNameSuccessColor;
+      margin-bottom: 1rem;
+
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .updateButton {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      background-color: $updateNameSecondaryColor;
+      color: $updateNameUpdateButtonTextColor;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten($updateNameSecondaryColor, 10%);
+      }
+
+      @media (max-width: 768px) {
+        padding: 0.9rem;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,227 @@
+@use "../../variables" as *;
+
+.successMessage {
+  color: $updateSocialSuccessColor;
+  font-size: 1rem;
+  margin-bottom: 20px;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+.adBannersContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: auto;
+  width: $containerWidth;
+
+  @media (max-width: 768px) {
+    height: auto;
+    height: 120lvh;
+  }
+
+  @media (max-width: 480px) {
+    height: auto;
+    height: 200lvh;
+  }
+
+  .outerBox {
+    background-color: $updateAdsBoxColor;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px $updateAdsShadowColor;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      padding: 15px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $updateAdsPrimaryColor;
+      margin-bottom: 10px;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .infoText {
+      font-size: 1rem;
+      color: $updateAdsTextColor;
+      margin-bottom: 20px;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .errorMessage {
+      color: $updateAdsErrorColor;
+      font-size: 1rem;
+      margin-bottom: 20px;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .gridContainer {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 40px;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .gridItem {
+      background-color: lighten($updateAdsBoxColor, 5%);
+      border: $updateAdsBorderDashed;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      transition: background-color 0.3s ease;
+
+      &.drag {
+        background-color: lightgray;
+        border-color: blue;
+      }
+
+      &:hover {
+        background-color: $updateAdsBackgroundHover;
+      }
+
+      .imageContainer {
+        position: relative;
+
+        .bannerImage {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          border-radius: 10px;
+
+          @media (max-width: 480px) {
+            height: 200px;
+          }
+        }
+
+        input[type="file"] {
+          bottom: 0%;
+          left: 0%;
+          position: absolute;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          z-index: 1;
+        }
+
+        .removeIcon {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          background-color: $updateAdsBoxColor;
+          color: $updateAdsErrorColor;
+          border-radius: 50%;
+          padding: 4px;
+          cursor: pointer;
+          font-size: 1rem;
+          box-shadow: 0 2px 4px $updateAdsShadowColor;
+          z-index: 2;
+
+          @media (max-width: 480px) {
+            font-size: 0.9rem;
+            padding: 3px;
+          }
+        }
+      }
+
+      .uploadPlaceholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: darken($updateAdsTextColor, 10%);
+        height: 250px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: $updateAdsBorderDashed;
+
+        @media (max-width: 480px) {
+          height: 200px;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      gap: 10px;
+
+      .clearButton {
+        background-color: $updateAdsErrorColor;
+        color: $updateAdsClearButton;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($updateAdsErrorColor, 10%);
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 8px 16px;
+        }
+      }
+
+      .updateButton {
+        background-color: $updateAdsSecondaryColor;
+        color: $updateAdsUpdateButton;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten($updateAdsSecondaryColor, 10%);
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 8px 16px;
+        }
+      }
+    }
+  }
+}

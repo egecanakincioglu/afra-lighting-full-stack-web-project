@@ -1,0 +1,209 @@
+.wrapper {
+  background: #f5f5f5;
+  padding: 20px 0;
+  display: flex;
+  height: 65lvh;
+  flex-direction: column;
+
+  .categoriesContainer {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    background: #f5f5f5;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media (min-width: 1025px) {
+      width: 80%;
+    }
+
+    @media (min-width: 1240px) {
+      width: 70%;
+    }
+
+    .swipeHint {
+      display: none;
+      text-align: center;
+      padding: 8px 0;
+      color: #666;
+      font-size: 0.8rem;
+      animation: swipeHint 2s infinite;
+
+      @media (max-width: 1024px) {
+        display: block;
+      }
+    }
+
+    @keyframes swipeHint {
+      0%,
+      100% {
+        opacity: 0.5;
+        transform: translateX(-5px);
+      }
+      50% {
+        opacity: 1;
+        transform: translateX(5px);
+      }
+    }
+
+    .categoryList {
+      display: flex;
+      justify-content: flex-start;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      position: relative;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 10px 0;
+      border-bottom: 2px solid #ccc;
+      background: #f5f5f5;
+      scrollbar-width: thin;
+      scrollbar-color: #ff7f00 #f5f5f5;
+
+      @media (min-width: 1025px) {
+        justify-content: center;
+        overflow-x: visible;
+        scroll-snap-type: none;
+      }
+
+      &::-webkit-scrollbar {
+        height: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #ff7f00;
+        border-radius: 2px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+      }
+
+      .categoryItem {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        text-align: center;
+        padding: 12px 20px;
+        margin: 0 2px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: color 0.3s;
+        white-space: nowrap;
+        position: relative;
+
+        @media (max-width: 1024px) {
+          flex: 0 0 50%;
+          padding: 10px 15px;
+          font-size: 0.9rem;
+        }
+
+        @media (min-width: 1025px) {
+          flex: 1;
+          padding: 10px;
+        }
+
+        &:hover {
+          color: #ff7f00;
+        }
+
+        &.active {
+          font-weight: 800;
+        }
+      }
+
+      .activeIndicator {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 5px;
+        border-radius: 8px;
+      }
+    }
+
+    .productGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 35px;
+
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media (min-width: 1440px) {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 20px;
+      }
+
+      .productItem {
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+
+        &:hover {
+          transform: scale(1.02);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+
+          @media (max-width: 1024px) {
+            height: 120px;
+            object-fit: contain;
+          }
+        }
+
+        .productName {
+          margin-top: 5px;
+          font-size: 0.9rem;
+          color: #333;
+          line-height: 1.3;
+          padding: 0 5px;
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 35px;
+      position: relative;
+      bottom: 0;
+
+      .pageButton,
+      .pageNumber {
+        padding: 8px 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        background: #ddd;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #ccc;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+
+      .activePage {
+        background: #ff7f00;
+        color: white;
+      }
+    }
+  }
+}

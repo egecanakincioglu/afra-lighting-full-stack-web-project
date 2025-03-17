@@ -1,0 +1,246 @@
+@use "../../variables.scss" as *;
+
+.favoriteProductsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: auto;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .outerBox {
+    background-color: $updateFavoritesBg;
+    padding: 20px;
+    border-radius: $updateFavoritesBorderRadius;
+    box-shadow: 0 8px 16px $updateFavoritesShadowColor;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .errorMessage {
+      color: $updateServicesErrorColor;
+      font-size: 1rem;
+      margin-bottom: 20px;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .successMessage {
+      @apply text-green-600;
+      font-size: 1rem;
+      margin-bottom: 20px;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 15px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $updateFavoritesTitle;
+      margin-bottom: 10px;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .infoText {
+      font-size: 1rem;
+      color: $updateFavoritesTextColor;
+      margin-bottom: 20px;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .gridContainer {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 40px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gridItem {
+      background-color: lighten($updateFavoritesGridItemBg, 5%);
+      border: 2px dashed $updateFavoritesGridItemBorder;
+      border-radius: $updateFavoritesBorderRadius;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $updateFavoritesHoverBackground;
+      }
+
+      &.drag {
+        background-color: lightgray;
+        border-color: blue;
+      }
+
+      .imageContainer {
+        position: relative;
+
+        .productImage {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: $updateFavoritesBorderRadius;
+
+          @media (max-width: 480px) {
+            height: 120px;
+          }
+        }
+
+        input[type="file"] {
+          bottom: 0%;
+          left: 0%;
+          position: absolute;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          z-index: 1;
+        }
+
+        .removeIcon {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          background-color: $updateFavoritesGridItemBorder;
+          color: $updateFavoritesErrorColor;
+          border-radius: 50%;
+          padding: 4px;
+          cursor: pointer;
+          font-size: 1rem;
+          box-shadow: 0 2px 4px $updateFavoritesShadowColor;
+          z-index: 2;
+
+          @media (max-width: 480px) {
+            font-size: 0.9rem;
+            padding: 3px;
+          }
+        }
+      }
+
+      .uploadPlaceholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: $updateFavoritesUpload;
+        height: 150px;
+        cursor: pointer;
+        border-radius: $updateFavoritesBorderRadius;
+        border: 2px dashed $updateFavoritesUploadBorder;
+
+        @media (max-width: 480px) {
+          height: 120px;
+        }
+      }
+
+      .productNameInput {
+        margin-top: 10px;
+        padding: 8px;
+        width: 100%;
+        font-size: 1rem;
+        border: 1px solid $updateFavoritesProductNameBorder;
+        border-radius: $updateFavoritesBorderRadius;
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 7px;
+        }
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      gap: 10px;
+
+      .clearButton {
+        background-color: $updateFavoritesErrorColor;
+        color: $updateFavoritesClearButton;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: $updateFavoritesBorderRadius;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($updateFavoritesErrorColor, 10%);
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 8px 16px;
+        }
+      }
+
+      .updateButton {
+        background-color: $updateFavoritesPrimaryColor;
+        color: $updateFavoritesUpdateButton;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: $updateFavoritesBorderRadius;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: lighten($updateFavoritesPrimaryColor, 10%);
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 8px 16px;
+        }
+      }
+    }
+  }
+}

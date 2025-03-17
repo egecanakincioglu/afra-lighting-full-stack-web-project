@@ -1,0 +1,74 @@
+@use "../variables" as *;
+
+.bannerContainer {
+  display: flex;
+  width: $containerWidth;
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 1.5rem 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.03);
+    opacity: 0.95;
+  }
+
+  .sideRectangle {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 2px 4px $bannerHoverShadow;
+    }
+  }
+
+  .sideRectangle {
+    flex-grow: 1;
+    height: 30rem;
+    background-color: $bannerSideBg;
+    width: $containerWidth;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bannerContainer {
+    flex-direction: column;
+    align-items: center;
+
+    .sideRectangle {
+      height: 20rem;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerContainer {
+    padding: 1rem;
+
+    .sideRectangle {
+      height: 15rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerContainer {
+    padding: 0.5rem;
+    gap: 0.5rem;
+
+    .sideRectangle {
+      height: 12rem;
+    }
+  }
+}

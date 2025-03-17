@@ -1,0 +1,370 @@
+.wrapper {
+  width: 50%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 1024px) {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .addButton {
+    background: #ff7f00;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+    display: block;
+    margin: 0 auto;
+
+    &:hover {
+      background: #e66b00;
+    }
+  }
+
+  .noReferenceMessage {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+    margin-top: 15px;
+  }
+
+  .referenceList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .referenceItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      flex-wrap: wrap;
+
+      .referenceInfo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1;
+
+        .referenceLogo {
+          width: 50px;
+          height: 50px;
+          border-radius: 5px;
+          object-fit: contain;
+        }
+
+        .referenceName {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+
+      .actions {
+        display: flex;
+        gap: 6px;
+        margin-top: 5px;
+
+        .editButton,
+        .deleteButton {
+          padding: 5px 8px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background 0.3s;
+        }
+
+        .editButton {
+          background: #3498db;
+          color: white;
+
+          &:hover {
+            background: #2980b9;
+          }
+        }
+
+        .deleteButton {
+          background: #e74c3c;
+          color: white;
+
+          &:hover {
+            background: #c0392b;
+          }
+        }
+      }
+    }
+  }
+
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 10px;
+
+    .modalContent {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 450px;
+      text-align: center;
+
+      .modalTitle {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .logoUpload {
+        width: 240px;
+        height: 160px;
+        margin: 0 auto 20px;
+        border: 2px dashed #ddd;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        &.dragging {
+          border-color: #ff7f00;
+          background-color: rgba(255, 127, 0, 0.1);
+        }
+
+        .logoLabel {
+          display: block;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+
+        .logoPreview {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+        .logoPlaceholder {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          padding: 20px;
+          color: #888;
+          font-size: 16px;
+          pointer-events: none;
+          transition: color 0.3s ease;
+        }
+
+        &:hover .logoPlaceholder {
+          color: #ff7f00;
+        }
+
+        .logoInput {
+          display: none;
+        }
+      }
+
+      .input,
+      .textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        box-sizing: border-box;
+
+        &:focus {
+          outline: none;
+          border-color: #ff7f00;
+          box-shadow: 0 0 0 2px rgba(255, 127, 0, 0.2);
+        }
+      }
+
+      .textarea {
+        height: 100px;
+        resize: vertical;
+      }
+
+      .error {
+        color: #e74c3c;
+        font-size: 14px;
+        margin: 10px 0;
+        font-weight: 500;
+      }
+
+      .modalActions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+
+        .cancelButton {
+          background: #ccc;
+          color: #333;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          border: none;
+          font-size: 16px;
+          transition: background 0.3s;
+
+          &:hover {
+            background: #b3b3b3;
+          }
+        }
+
+        .confirmButton {
+          background: #ff7f00;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          border: none;
+          font-size: 16px;
+          transition: background 0.3s;
+
+          &:hover {
+            background: #e66b00;
+          }
+        }
+
+        .deleteConfirmButton {
+          background: #e74c3c;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          border: none;
+          font-size: 16px;
+          transition: background 0.3s;
+
+          &:hover {
+            background: #c0392b;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 📱 Mobil Uyumlu Düzenlemeler */
+@media (max-width: 768px) {
+  .wrapper {
+    width: 95%;
+    padding: 12px;
+
+    .addButton {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    .referenceList {
+      .referenceItem {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+
+        .referenceInfo {
+          width: 100%;
+          margin-bottom: 10px;
+
+          .referenceName {
+            font-size: 16px;
+          }
+        }
+
+        .actions {
+          width: 100%;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    .modalOverlay {
+      .modalContent {
+        padding: 20px;
+        width: 95%;
+        max-width: 380px;
+
+        .logoUpload {
+          width: 250px;
+          height: 150px;
+
+          .logoPlaceholder {
+            font-size: 14px;
+            padding: 15px;
+          }
+        }
+
+        .input,
+        .textarea {
+          font-size: 14px;
+          padding: 8px;
+        }
+
+        .modalActions {
+          flex-direction: column;
+          gap: 10px;
+
+          button {
+            width: 100%;
+            padding: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    .modalOverlay {
+      .modalContent {
+        .logoUpload {
+          width: 200px;
+          height: 120px;
+
+          .logoPlaceholder {
+            font-size: 13px;
+            padding: 10px;
+          }
+        }
+
+        .modalTitle {
+          font-size: 18px;
+        }
+
+        .warningText {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

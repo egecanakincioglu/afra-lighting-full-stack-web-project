@@ -1,0 +1,159 @@
+@use "../../variables.scss" as *;
+
+.errorText {
+  color: $updateContactErrorColor;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+  }
+}
+
+.successText {
+  color: $updateContactSuccessColor;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+  }
+}
+
+.contactContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 1rem;
+
+  .innerBox {
+    width: 100%;
+    max-width: 600px;
+    background-color: $updateContactBoxColor;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px $updateContactShadowColor;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      padding: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      padding: 1.5rem;
+    }
+
+    .headerContainer {
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 1.8rem;
+        color: $updateContactPrimaryColor;
+        font-weight: bold;
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .inputGroup {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+
+        label {
+          font-size: 1rem;
+          font-weight: bold;
+          color: $updateContactTextColor;
+          margin-bottom: 0.5rem;
+
+          @media (max-width: 768px) {
+            font-size: 0.9rem;
+          }
+
+          @media (max-width: 480px) {
+            font-size: 0.8rem;
+          }
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1rem;
+          border: 1px solid $updateContactInputBorderColor;
+          border-radius: 8px;
+          background-color: $updateContactInputBg;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            border-color: $updateContactSecondaryColor;
+          }
+
+          @media (max-width: 768px) {
+            padding: 0.9rem;
+          }
+
+          @media (max-width: 480px) {
+            padding: 0.8rem;
+            font-size: 0.9rem;
+          }
+        }
+
+        textarea {
+          height: 100px;
+          resize: none;
+
+          @media (max-width: 768px) {
+            height: 80px;
+          }
+
+          @media (max-width: 480px) {
+            height: 70px;
+          }
+        }
+      }
+
+      .updateButton {
+        padding: 1rem;
+        font-size: 1.1rem;
+        background-color: $updateContactSecondaryColor;
+        color: $updateContactUpdateButtonTextColor;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: lighten($updateContactSecondaryColor, 10%);
+        }
+
+        @media (max-width: 768px) {
+          padding: 0.9rem;
+          font-size: 1rem;
+        }
+
+        @media (max-width: 480px) {
+          padding: 0.8rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

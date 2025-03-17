@@ -1,0 +1,142 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 15px;
+
+  .modalContent {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      padding: 30px;
+      width: 80%;
+    }
+
+    .closeButton {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #666;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #ff7f00;
+      }
+
+      @media (max-width: 767px) {
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+      }
+    }
+
+    .modalInner {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+
+      .modalImage {
+        width: 100%;
+        max-height: 400px;
+        border-radius: 8px;
+        object-fit: contain;
+        aspect-ratio: 1/1;
+
+        @media (min-width: 768px) {
+          width: 45%;
+          max-height: none;
+        }
+      }
+
+      .productDetails {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (min-width: 768px) {
+          width: 55%;
+        }
+
+        .productInfo {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 20px 0;
+          font-size: 16px;
+
+          li {
+            margin-bottom: 12px;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+
+            strong {
+              color: #333;
+              min-width: 120px;
+              display: inline-block;
+            }
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+
+          @media (max-width: 767px) {
+            font-size: 14px;
+
+            li strong {
+              min-width: 90px;
+            }
+          }
+        }
+
+        .teklifAlButton {
+          background: #ff7f00;
+          color: white;
+          padding: 12px 25px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: all 0.3s;
+          width: 100%;
+          text-align: center;
+
+          &:hover {
+            background: #e66b00;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+          }
+
+          @media (min-width: 768px) {
+            width: auto;
+            align-self: flex-start;
+          }
+        }
+      }
+    }
+  }
+}

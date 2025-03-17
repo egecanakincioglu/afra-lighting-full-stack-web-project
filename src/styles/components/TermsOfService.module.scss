@@ -1,0 +1,57 @@
+@use "../variables" as *;
+
+.termsContainer {
+  padding: 4rem 0;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.termsContent {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: $termsOfServicePrimaryColor;
+}
+
+.termsTitle {
+  font-size: 2.5rem;
+  color: $termsOfServicePrimaryColor;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.sectionHeading {
+  font-size: 1.8rem;
+  color: $termsOfServicePrimaryColor;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.termsText {
+  margin-bottom: 1.5rem;
+  color: $termsOfServiceSecondaryColor;
+}
+
+.bulletList {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  li {
+    margin-bottom: 0.5rem;
+    color: $termsOfServiceSecondaryColor;
+
+    strong {
+      color: $termsOfServicePrimaryColor;
+    }
+  }
+}
+
+.link {
+  color: $termsOfServicePrimaryColor;
+  text-decoration: underline;
+
+  &:hover {
+    color: $termsOfServiceLinkHoverColor;
+  }
+}

@@ -1,0 +1,31 @@
+@use "../variables" as *;
+
+.container {
+  @apply flex flex-col items-center justify-center h-screen bg-gray-100 text-center;
+
+  div {
+    h1 {
+      @apply text-6xl font-bold text-red-500 mb-4;
+    }
+
+    p {
+      @apply text-xl text-gray-600 mb-6;
+    }
+
+    button {
+      @apply cursor-pointer border-none text-red-500 p-[10px_20px] text-[1rem] rounded-[10px];
+
+      background-color: $updateServicesSecondaryColor;
+      color: $updateServicesUpdateButton;
+
+      &:hover {
+        background-color: lighten($updateServicesSecondaryColor, 10%);
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
+  }
+}

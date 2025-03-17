@@ -1,0 +1,20 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 90lvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+  }
+  
+  .leftContainer {
+    flex: 3;
+      align-self: flex-start;
+  }
+  
+  .rightContainer {
+    flex: 1;
+    align-self: flex-start;
+  }

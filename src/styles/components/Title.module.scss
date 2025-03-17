@@ -1,0 +1,63 @@
+@use "../variables" as *;
+
+.headingContainer {
+  width: 90%;
+  max-width: $containerWidth;
+  margin: 4rem auto;
+  text-align: center;
+  position: relative;
+
+  .backgroundText {
+    font-size: clamp(2rem, 4vw, 4.5rem);
+    color: $titleBgTextColor;
+    font-weight: bold;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    white-space: nowrap;
+
+    @media (max-width: 768px) {
+      font-size: 3rem;
+      top: 25%;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+      top: 30%;
+    }
+  }
+
+  .foregroundText {
+    font-size: clamp(1.75rem, 3vw, 3rem);
+    font-weight: bold;
+    color: $titleForeTextColor;
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+
+    &::after {
+      content: "";
+      display: block;
+      width: clamp(80px, 20%, 150px);
+      height: clamp(3px, 0.5vw, 6px);
+      background-color: $titleForeTextAnimationBg;
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+    }
+
+    @media (max-width: 768px) {
+      &::after {
+        bottom: -3px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      &::after {
+        bottom: -2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@use "../../variables.scss" as *;
+
+.updateAboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 15px;
+  }
+
+  .outerBox {
+    background-color: $updateAboutBg;
+    padding: 30px;
+    border-radius: $updateAboutBorderRadius;
+    box-shadow: 0 8px 16px $updateAboutShadowColor;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 15px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $updateAboutTitle;
+      margin-bottom: 10px;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .infoText {
+      font-size: 1rem;
+      color: $updateAboutTextColor;
+      margin-bottom: 20px;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .errorMessage,
+    .successMessage {
+      font-size: 1rem;
+      margin-bottom: 10px;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .errorMessage {
+      color: $updateAboutErrorColor;
+    }
+
+    .successMessage {
+      color: $updateAboutSuccessColor;
+    }
+
+    .aboutInput {
+      width: 100%;
+      height: 200px;
+      font-size: 1rem;
+      padding: 10px;
+      border: 1px solid $updateAboutInputBorder;
+      border-radius: $updateAboutBorderRadius;
+      resize: none;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px $updateAboutShadowColor;
+
+      &:focus {
+        outline: none;
+        border-color: $updateAboutPrimaryColor;
+      }
+
+      @media (max-width: 768px) {
+        height: 150px;
+      }
+
+      @media (max-width: 480px) {
+        height: 120px;
+        font-size: 0.9rem;
+        padding: 8px;
+      }
+    }
+
+    .updateButton {
+      background-color: $updateAboutPrimaryColor;
+      color: $updateAboutUpdateButton;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: $updateAboutBorderRadius;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten($updateAboutPrimaryColor, 10%);
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
+  }
+}

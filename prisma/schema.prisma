@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model messages {
+  id      Int       @id @default(autoincrement())
+  name    String    @db.VarChar(100)
+  email   String    @db.VarChar(100)
+  subject String?   @db.VarChar(150)
+  message String    @db.Text
+  sent_at DateTime? @default(now()) @db.Timestamp(0)
+}
+model users {
+  id            Int       @id @default(autoincrement())
+  username      String    @unique(map: "username") @db.VarChar(50)
+  email         String    @unique(map: "email") @db.VarChar(255)
+  password_hash String    @db.VarChar(255)
+  created_at    DateTime? @default(now()) @db.Timestamp(  0)
+  sessions      String?   @db.Text
+}
+
+model visits {
+  id          Int       @id @default(autoincrement())
+  visit_date  DateTime? @default(now()) @db.Timestamp(0)
+  ip_address  String?   @db.VarChar(45)
+  country     String?   @db.VarChar(100)
+  city        String?   @db.VarChar(100)
+  page_viewed String?   @db.VarChar(255)
+  referrer    String?   @db.VarChar(255)
+  user_agent  String?   @db.Text
+}

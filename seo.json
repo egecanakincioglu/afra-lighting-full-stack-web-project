@@ -1,0 +1,271 @@
+{
+  "component": {
+    "workingAreas": {
+      "title": {
+        "backgroundText": "Çalışma Alanlarımız",
+        "foregroundText": "Çalışma Alanlarımız"
+      },
+      "images": {
+        "alt": "{alt}"
+      }
+    },
+    "vision": {
+      "title": {
+        "backgroundText": "Vizyonumuz",
+        "foregroundText": "Vizyonumuz"
+      }
+    },
+    "terms": {
+      "title": {
+        "backgroundText": "Şartlar ve Koşullar",
+        "foregroundText": "Şartlar ve Koşullar",
+        "text": "{name} Şartlar ve Koşullar"
+      },
+      "sections": [
+        {
+          "title": "1. Kabul ve Geçerlilik",
+          "content": "{name} web sitesine erişim sağladığınız anda bu Şartlar ve Koşullar geçerlidir. Web sitesini kullanarak bu şartları kabul ettiğinizi beyan etmiş olursunuz."
+        },
+        {
+          "title": "2. Hizmet Koşulları",
+          "content": "{name}, aydınlatma çözümleri sunan bir firmadır ve web sitesi üzerinden hizmetler hakkında bilgi sağlar."
+        },
+        {
+          "title": "3. Kullanıcı Hak ve Yükümlülükleri",
+          "content": "{name} web sitesi kullanıcılarının güvenli ve yasal çerçevede davranması gerekmektedir.",
+          "warnings": [
+            "<strong>Bilgi Güncellemeleri:</strong> Kullanıcılar, verdikleri bilgilerin doğruluğunu sağlamakla yükümlüdür.",
+            "<strong>Güvenli Erişim:</strong> Kullanıcılarımız, sitemize güvenli bağlantılarla erişim sağlamalı ve hesap bilgilerini korumalıdır."
+          ]
+        },
+        {
+          "title": "4. Veri Gizliliği ve Güvenliği",
+          "content": "{name} olarak, kullanıcılarımızın gizliliğine büyük önem veriyoruz. Kişisel bilgilerinizi korumak için teknik ve idari önlemler almaktayız."
+        },
+        {
+          "title": "5. Fikri Mülkiyet Haklar",
+          "content": "Web sitemizde yer alan tüm içerikler, {name}’e aittir ve telif hakları kapsamında korunmaktadır."
+        },
+        {
+          "title": "6. Çerez Kullanımı",
+          "content": "Web sitemizde kullanıcı deneyimini iyileştirmek için çerezler kullanmaktayız. Çerez politikamız hakkında daha fazla bilgi almak için <Link href=\"/privacy\" className={style}>Çerez Politikası</Link> sayfamızı ziyaret edebilirsiniz."
+        },
+        {
+          "title": "7. Sorumluluğun Sınırlandırılması",
+          "content": "{name}, web sitesindeki bilgilerin doğruluğu ve güncelliği için azami çaba göstermektedir."
+        },
+        {
+          "title": "8. Bağlantılar",
+          "content": "Web sitemizden üçüncü taraf web sitelerine bağlantılar sağlayabiliriz, ancak bu sitelerin içeriği ve politikaları üzerinde kontrolümüz yoktur."
+        },
+        {
+          "title": "9. Değişiklik Hakkı",
+          "content": "{name}, bu Şartlar ve Koşullar’da herhangi bir zamanda değişiklik yapma hakkını saklı tutar."
+        },
+        {
+          "title": "10. İletişim",
+          "content": "Şartlar ve Koşullar ile ilgili herhangi bir sorunuz olması durumunda bizimle iletişime geçebilirsiniz:\n<br />\n<strong>E-posta:</strong> {email}\n<br />\n<strong>Telefon:</strong> {phone}"
+        }
+      ]
+    },
+    "serviceArea": {
+      "images": {
+        "alt": "{name} detay görseli"
+      }
+    },
+    "products": {
+      "title": {
+        "backgroundText": "Ürün Kataloglarımız",
+        "foregroundText": "Ürün Kataloglarımız"
+      }
+    },
+    "privacy": {
+      "title": {
+        "backgroundText": "Gizlilik Politikası",
+        "foregroundText": "Gizlilik Politikası",
+        "text": "{name} Gizlilik ve Çerez Politikası"
+      },
+      "intro": [
+        "{name} olarak, kullanıcılarımızın gizliliğine ve veri güvenliğine büyük önem veriyoruz.",
+        "Kişisel bilgilerinizi koruma konusundaki sorumluluğumuzun bilincindeyiz ve bu doğrultuda, web sitemizde ve hizmetlerimizde toplanan bilgileri nasıl işlediğimizi açık ve şeffaf bir şekilde açıklamak istiyoruz.",
+        "Bu Gizlilik ve Çerez Politikası, kişisel verilerinizi nasıl topladığımız, kullandığımız, sakladığımız ve koruduğumuz hakkında bilgilendirici ve profesyonel bir rehber sunar."
+      ],
+      "sections": [
+        {
+          "title": "1. Kişisel Verilerin Toplanması ve Kullanımı",
+          "content": "{name} olarak, size en iyi deneyimi sunmak ve taleplerinizi en iyi şekilde karşılamak amacıyla bazı kişisel verilerinizi toplayabiliriz. Bu veriler; ad, soyad, e-posta adresi, telefon numarası ve IP adresiniz gibi bilgileri içerebilir.",
+          "warnings": [
+            "Talep ettiğiniz ürün ve hizmetleri sağlamak,",
+            "Size özel kampanya, fırsat ve güncellemeler hakkında bilgilendirmek,",
+            "Hizmetlerimizi geliştirmek ve kullanıcı deneyiminizi iyileştirmek,",
+            "Yasal yükümlülüklerimizi yerine getirmek."
+          ]
+        },
+        {
+          "title": "2. Çerezlerin Kullanımı",
+          "content": "Web sitemizde, kullanıcı deneyiminizi daha verimli hale getirmek ve sitemizin performansını optimize etmek için çerezler kullanıyoruz. Çerezler, tarayıcınız tarafından bilgisayarınıza veya mobil cihazınıza kaydedilen küçük veri dosyalarıdır. Bu dosyalar, siteyi ziyaret ettiğinizde size daha iyi bir deneyim sunmak için bilgiler depolar.",
+          "warnings": [
+            "<strong>Zorunlu Çerezler:</strong> Sitemizin güvenli bir şekilde çalışması için gereklidir.",
+            "<strong>Performans Çerezleri:</strong> Sitemizin performansını ölçmek ve optimize etmek için kullanılır.",
+            "<strong>İşlevsellik Çerezleri:</strong> Tercihlerinizi hatırlayarak size daha kişiselleştirilmiş bir deneyim sunar.",
+            "<strong>Hedefleme ve Reklam Çerezleri:</strong> İlginizi çekebilecek içerik ve reklamları size sunmak amacıyla kullanılır."
+          ]
+        },
+        {
+          "title": "3. Çerez Ayarlarını Yönetme",
+          "content": "Kullanıcılarımız, tarayıcı ayarları üzerinden çerezleri kabul etme veya reddetme hakkına sahiptir. Çerez ayarlarını değiştirmek için tarayıcınızın “Ayarlar” veya “Gizlilik” bölümüne giderek gerekli düzenlemeleri yapabilirsiniz."
+        },
+        {
+          "title": "4. Verilerin Korunması",
+          "content": "{name} olarak, kişisel verilerinizi korumak için teknik ve idari önlemler almaktayız. Verilerin yetkisiz erişime karşı korunmasını sağlamak amacıyla en güncel güvenlik teknolojilerini ve şifreleme yöntemlerini kullanıyoruz."
+        },
+        {
+          "title": "5. Verilerin Üçüncü Taraflarla Paylaşımı",
+          "content": "Kişisel verilerinizi, yalnızca yasal zorunluluklar veya hizmetlerimizi sağlamak için gerekli olduğu durumlarda üçüncü taraflarla paylaşırız. Verilerinizi asla izinsiz olarak üçüncü şahıs veya şirketlerle paylaşmayız."
+        },
+        {
+          "title": "6. Politika Değişiklikleri",
+          "content": "{name} olarak, bu gizlilik politikasını güncelleyebiliriz. Önemli değişiklikler olması durumunda, sizi bilgilendirmek için gerekli duyuruları sitemiz üzerinden yapacağız."
+        },
+        {
+          "title": "7. İletişim",
+          "content": "Gizlilik ve çerez politikamızla ilgili sorularınız için bizimle iletişime geçebilirsiniz:\n<br />\n<strong>E-posta:</strong> {email}\n<br />\n<strong>Telefon:</strong> {phone}"
+        }
+      ]
+    },
+    "about": {
+      "title": {
+        "backgroundText": "Hakkımızda",
+        "foregroundText": "Hakkımızda"
+      }
+    },
+    "loading": {
+      "logo": {
+        "path": "/main-logo.webp",
+        "alt": "Loading Logo"
+      }
+    },
+    "highlights": {
+      "title": {
+        "backgroundText": "Favori Ürünlerimiz",
+        "foregroundText": "Favori Ürünlerimiz"
+      },
+      "images": {
+        "alt": "Öne çıkan ürün {url}"
+      },
+      "ads": {
+        "alt": "Reklam panosu {url}"
+      }
+    },
+    "header": {
+      "logo": {
+        "path": "/main-logo.webp",
+        "alt": "{name} Logo"
+      }
+    },
+    "footer": {
+      "logo": {
+        "path": "/main-logo.webp",
+        "alt": "{name} Logo"
+      },
+      "pages": {
+        "privacy": "privacy",
+        "terms": "terms"
+      },
+      "poweredBy": {
+        "name": "Flareye",
+        "url": "https://flareye.com",
+        "logo": {
+          "path": "/flareye/flareye-tm-sites.png",
+          "alt": "Flareye Logosu"
+        }
+      }
+    },
+    "contact": {
+      "title": {
+        "backgroundText": "Bize Ulaşın",
+        "foregroundText": "Bize Ulaşın"
+      }
+    },
+    "banner": {
+      "images": {
+        "alt": "{name} Tanıtım Fotoğrafı"
+      }
+    }
+  },
+  "page": {
+    "name": "{name} - Aydınlatma Çözümleri",
+    "description": "{name}, modern ve yenilikçi aydınlatma çözümleriyle ev ve iş yerlerine estetik, enerji tasarruflu ve uzun ömürlü ürünler sunar. Şık tasarımlarıyla mekanlarınıza zarafet katar.",
+    "font": "https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap",
+    "keywords": "{name}, aydınlatma, LED ışıklar, modern tasarım, enerji tasarrufu",
+    "favicon": "/afra-favicon.png",
+    "manifest": "/site.webmanifest",
+    "ogImage": "/main-logo.webp",
+    "ogLocale": "tr_TR",
+    "ogType": "website",
+    "pages": {
+      "about": {
+        "title": "{name} - Hakkımızda",
+        "description": "{name}, modern ve estetik aydınlatma çözümleri sunma misyonuyla hareket eder.",
+        "keywords": "{name}, hakkımızda, misyon, modern aydınlatma, LED ışıklar, estetik tasarım"
+      },
+      "catalogs": {
+        "title": "{name} - Kataloglar",
+        "description": "{name} ürün kataloglarını keşfedin. Modern ve enerji tasarruflu aydınlatma çözümleri için detaylı bilgiler.",
+        "keywords": "{name}, kataloglar, modern tasarım, LED ışıklar, enerji tasarrufu"
+      },
+      "categories": {
+        "title": "{name} - Ürün Kategorileri",
+        "description": "{name}, modern ve yenilikçi aydınlatma çözümleriyle ev ve iş yerlerine estetik, enerji tasarruflu ve uzun ömürlü ürünler sunar. Şık tasarımlarıyla mekanlarınıza zarafet katar.",
+        "keywords": "{name}, aydınlatma, LED ışıklar, modern tasarım, enerji tasarrufu"
+      },
+      "contact": {
+        "title": "{name} - İletişim",
+        "description": "{name} ile iletişime geçin. İhtiyaçlarınıza uygun modern ve estetik aydınlatma çözümleri hakkında bilgi alın.",
+        "keywords": "{name} iletişim, iletişim, modern aydınlatma iletişim, LED ışıklar iletişim",
+        "languages": ["Turkish", "English"],
+        "work": {
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "startTime": "08:30",
+          "endTime": "17:30"
+        },
+        "serviceArea": "TR"
+      },
+      "privacy": {
+        "title": "{name} - Gizlilik Politikası",
+        "description": "{name} gizlilik politikası ile kişisel verilerinizi nasıl işlediğimizi öğrenebilirsiniz.",
+        "keywords": "{name}, gizlilik politikası, kişisel veri, veri güvenliği"
+      },
+      "projects": {
+        "title": "{name} - Projelerimiz",
+        "description": "{name}, Şirketimizin diğer şirket ya da kişiler ile yaptıkları proje ve tasarımları içerir",
+        "keywords": "{name}, projeler, modern aydınlatma, LED ışıklar, estetik tasarım, tasarımlar"
+      },
+      "references": {
+        "title": "{name} - Referanslarımız",
+        "description": "{name}, birlikte iş yapıp çalıştığımız firmalar ve referanslarımız.",
+        "keywords": "{name}, referanslar, referanslarımız, şirketler"
+      },
+      "services": {
+        "title": "{name} - Hizmetlerimiz",
+        "description": "{name} hizmetlerini keşfedin. Modern aydınlatma çözümleri, enerji tasarrufu ve estetik tasarım için doğru adres.",
+        "keywords": "{name}, hizmetlerimiz, modern aydınlatma çözümleri, enerji tasarrufu, LED ışıklar"
+      },
+      "terms": {
+        "title": "{name} - Kullanım Şartları",
+        "description": "{name} kullanım şartlarını okuyun. Web sitemizi kullanırken geçerli olan kurallar ve politikalar hakkında bilgi edinin.",
+        "keywords": "{name}, kullanım şartları, aydınlatma, LED ışıklar, politikalar"
+      },
+      "vision": {
+        "title": "{name} - Vizyonumuz",
+        "description": "{name} vizyonu ile modern ve estetik aydınlatma çözümleri sunar. Enerji tasarruflu ve kaliteli ürünlerimizle geleceği aydınlatıyoruz.",
+        "keywords": "{name}, vizyon, aydınlatma, LED ışıklar, modern tasarım, enerji tasarrufu"
+      },
+      "dashboard": {
+        "title": "{name} - Yönetim Paneli",
+        "description": "{name}",
+        "keywords": "{name}"
+      }
+    }
+  }
+}

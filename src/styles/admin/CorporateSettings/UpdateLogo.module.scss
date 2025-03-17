@@ -1,0 +1,226 @@
+@use "../../variables.scss" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: $updateLogoBackgroundColor;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 6px 16px $updateLogoShadowColor;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+    margin: 30px auto;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  color: $updateLogoTextColor;
+  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+  }
+}
+
+.dropZone {
+  border: 2px dashed $updateLogoPrimaryColor;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  background-color: $updateLogoBackgroundColor;
+  cursor: pointer;
+  width: 100%;
+  max-width: 500px;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px;
+  }
+}
+
+.icon {
+  font-size: 3rem;
+  color: $updateLogoPrimaryColor;
+  margin-bottom: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+}
+
+.dropText {
+  font-size: 1.2rem;
+  color: $updateLogoTextColor;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+.browse {
+  color: $updateLogoPrimaryColor;
+  cursor: pointer;
+}
+
+.fileInput {
+  display: none;
+}
+
+.previewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.preview {
+  position: relative;
+  margin-bottom: 10px;
+
+  .previewImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px $updateLogoShadowColor;
+
+    @media (max-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media (max-width: 480px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .removeIcon {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: $updateLogoBackgroundColor;
+    color: $updateLogoErrorColor;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .checkIcon {
+    color: $updateLogoSuccessColor;
+    font-size: 1.8rem;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.fileName {
+  font-size: 1rem;
+  color: $updateLogoTextColor;
+  margin-top: 10px;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+.progressBar {
+  width: 100%;
+  max-width: 500px;
+  background-color: lighten($updateLogoBackgroundColor, 10%);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 10px;
+
+  .progress {
+    height: 12px;
+    background-color: $updateLogoPrimaryColor;
+
+    @media (max-width: 480px) {
+      height: 10px;
+    }
+  }
+}
+
+.uploadButton {
+  background-color: $updateLogoPrimaryColor;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: $updateLogoSecondaryColor;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+.success {
+  color: $updateLogoSuccessColor;
+  font-size: 1rem;
+  margin-top: 20px;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+.error {
+  color: $updateLogoErrorColor;
+  font-size: 1rem;
+  margin-top: 20px;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}

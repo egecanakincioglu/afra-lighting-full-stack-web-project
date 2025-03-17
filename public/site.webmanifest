@@ -1,0 +1,13 @@
+{
+    "name": "Afra Lighting",
+    "short_name": "Afra",
+    "description": "Afra Lighting, ev ve iş yerleri için modern ve estetik aydınlatma çözümleri sunar.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#f9a22e",
+    "categories": ["shopping", "home", "design", "lighting"],
+    "lang": "tr",
+    "dir": "ltr"
+  }

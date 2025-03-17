@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /setup/
+
+Allow: /
+
+Sitemap: https://www.afralighting.com/sitemap.xml

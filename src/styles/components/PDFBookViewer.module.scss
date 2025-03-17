@@ -1,0 +1,13 @@
+@use "../variables" as *;
+
+.generalSection {
+  @apply w-screen h-[70vh] flex justify-center items-center bg-[var(--pdfBg)];
+
+  .pageContainer {
+    @apply flex justify-center items-center;
+
+    img {
+      @apply shadow-md rounded-lg;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@use "../variables" as *;
+
+.stepContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $step1BackgroundColor;
+
+  .innerBox {
+    width: 100%;
+    max-width: 900px;
+    background-color: $step1BoxColor;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px $step1ShadowColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .logoContainer {
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+
+    .betaVersion {
+      background-color: $step1VersionBoxColor;
+      color: $step1WhiteColor;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      box-shadow: 0 4px 8px $step1ShadowColor;
+      text-transform: uppercase;
+    }
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    color: $step1PrimaryColor;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+
+  .licenseText {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: lighten($step1BoxColor, 5%);
+    border: 1px solid $step1ShadowColor;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: $step1TextColor;
+    line-height: 1.6;
+    text-align: left;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .actionsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+
+    .checkboxContainer {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      color: $step1TextColor;
+
+      input {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      gap: 1rem;
+
+      .acceptButton {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        background-color: $step1SecondaryColor;
+        color: $step1WhiteColor;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        opacity: 0.5;
+        pointer-events: none;
+
+        &:not(:disabled) {
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        &:hover:enabled {
+          background-color: lighten($step1SecondaryColor, 10%);
+        }
+      }
+
+      .rejectButton {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        background-color: $step1RejectButtonColor;
+        color: $step1WhiteColor;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: lighten($step1RejectButtonColor, 10%);
+        }
+      }
+    }
+  }
+}

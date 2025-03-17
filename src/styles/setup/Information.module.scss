@@ -1,0 +1,128 @@
+@use "../variables" as *;
+
+.setupInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: $informationBackgroundColor;
+  height: 100vh;
+
+  .setupBox,
+  .stepsTable {
+    width: 100%;
+    max-width: 900px;
+    background-color: $informationBoxColor;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px $informationShadowColor;
+  }
+
+  .setupBox {
+    .headerContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      .logoContainer {
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+
+      .betaVersion {
+        background-color: $informationVersionBoxColor;
+        color: $informationWhiteColor;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        box-shadow: 0 4px 8px $informationShadowColor;
+        text-transform: uppercase;
+      }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: $informationPrimaryColor;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: $informationTextColor;
+      line-height: 1.8;
+      text-align: center;
+    }
+  }
+
+  .stepsTable {
+    text-align: left;
+    position: relative;
+
+    h2 {
+      font-size: 1.8rem;
+      color: $informationPrimaryColor;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    ol {
+      list-style: decimal inside;
+      font-size: 1.1rem;
+      color: $informationTextColor;
+      padding-inline-start: 20px;
+
+      li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+
+        strong {
+          color: $informationSecondaryColor;
+          font-weight: bold;
+        }
+
+        p {
+          margin: 0.5rem 0 0;
+          font-size: 1rem;
+          color: $informationDarkTextColor;
+        }
+
+        ul {
+          margin-top: 0.5rem;
+          list-style: disc inside;
+          padding-inline-start: 20px;
+
+          li {
+            font-size: 0.95rem;
+            color: $informationDarkerTextColor;
+          }
+        }
+      }
+    }
+
+    .nextStepButton {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background-color: $informationSecondaryColor;
+      color: $informationWhiteColor;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      float: right;
+
+      &:hover {
+        background-color: $informationLightSecondaryColor;
+      }
+    }
+  }
+}

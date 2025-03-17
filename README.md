@@ -152,7 +152,6 @@ This project is licensed under the **MIT License**.
 For any inquiries:
 <br>
 📧 **Email**: egecanakincioglu@outlook.com  
-<br>
 🌐 **Example Website**: [Afra Lighting](https://afralighting.com)
 <br>
 🌐 **Software Company**: [Flareye](https://flareye.com)

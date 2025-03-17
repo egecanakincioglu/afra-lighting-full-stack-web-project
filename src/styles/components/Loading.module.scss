@@ -1,0 +1,44 @@
+@use "../variables" as *;
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $loadingBg;
+  z-index: 9999;
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .progressBarContainer {
+    width: 40%;
+    max-width: 300px;
+    height: 10px;
+    background-color: $loadingBarContainerBg;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .progressBar {
+    width: 0%;
+    height: 100%;
+    background-color: $loadingBarBg;
+    animation: loadingEffect 5s infinite;
+  }
+}
+
+@keyframes loadingEffect {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}

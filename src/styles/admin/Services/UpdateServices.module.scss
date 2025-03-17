@@ -1,0 +1,317 @@
+@use "../../variables" as *;
+
+.servicesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: lighten($updateServicesBoxColor, 10%);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $updateServicesSecondaryColor;
+    border-radius: 10px;
+    border: 2px solid lighten($updateServicesBoxColor, 10%);
+
+    &:hover {
+      background: darken($updateServicesSecondaryColor, 10%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    height: auto;
+  }
+
+  .outerBox {
+    background-color: $updateServicesBoxColor;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px $updateServicesShadowColor;
+    width: 100%;
+    max-width: 1000px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 480px) {
+      padding: 15px;
+      margin: 60px auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $updateServicesPrimaryColor;
+      margin-bottom: 15px;
+
+      @media (max-width: 480px) {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
+    }
+
+    .infoText {
+      font-size: 1rem;
+      color: $updateServicesTextColor;
+      margin-bottom: 20px;
+      text-align: center;
+      line-height: 1.4;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .errorMessage {
+      color: $updateServicesErrorColor;
+      font-size: 1rem;
+      margin-bottom: 20px;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .successMessage {
+      color: #16a34a;
+      font-size: 1rem;
+      margin-bottom: 20px;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .gridContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 40px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .gridItem {
+      background-color: lighten($updateServicesBoxColor, 5%);
+      border: $updateServicesBorderDashed;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      transition: background-color 0.3s ease;
+
+      &.drag {
+        background-color: lightgray;
+        border-color: blue;
+      }
+
+      &:hover {
+        background-color: $updateServicesBackgroundHover;
+      }
+
+      .imageContainer {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16/9;
+
+        input[type="file"] {
+          opacity: 0;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+          z-index: 1;
+        }
+
+        .serviceImage {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+        .removeIcon {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          background-color: $updateServicesBoxColor;
+          color: $updateServicesErrorColor;
+          border-radius: 50%;
+          padding: 4px;
+          cursor: pointer;
+          font-size: 1rem;
+          box-shadow: 0 2px 4px $updateServicesShadowColor;
+          z-index: 2;
+
+          @media (max-width: 480px) {
+            font-size: 0.875rem;
+            padding: 3px;
+            top: 5px;
+            right: 5px;
+          }
+        }
+      }
+
+      .uploadPlaceholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: darken($updateServicesTextColor, 10%);
+        height: 150px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: $updateServicesBorderDashed;
+        aspect-ratio: 16/9;
+
+        @media (max-width: 480px) {
+          height: 100px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .titleInput {
+        margin-top: 10px;
+        padding: 8px;
+        width: 100%;
+        font-size: 1rem;
+        border: 1px solid $updateServicesTitleInputBorder;
+        border-radius: 10px;
+
+        @media (max-width: 480px) {
+          font-size: 0.875rem;
+          padding: 6px;
+        }
+      }
+
+      .descriptionInput {
+        margin-top: 10px;
+        padding: 8px;
+        width: 100%;
+        font-size: 1rem;
+        height: 120px;
+        border: 1px solid $updateServicesDescriptionInputBorder;
+        border-radius: 10px;
+        resize: vertical;
+
+        /* Textarea Scrollbar */
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: $updateServicesTextColor;
+          border-radius: 4px;
+        }
+
+        @media (max-width: 480px) {
+          height: 80px;
+          font-size: 0.875rem;
+          padding: 6px;
+        }
+      }
+
+      .additionalDescriptionInput {
+        margin-top: 10px;
+        padding: 8px;
+        width: 100%;
+        font-size: 1rem;
+        height: 150px;
+        border: 1px solid $updateServicesDetailedInputBorder;
+        border-radius: 10px;
+        resize: vertical;
+
+        /* Textarea Scrollbar */
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: $updateServicesTextColor;
+          border-radius: 4px;
+        }
+
+        @media (max-width: 480px) {
+          height: 100px;
+          font-size: 0.875rem;
+          padding: 6px;
+        }
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      gap: 10px;
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .clearButton {
+        background-color: $updateServicesErrorColor;
+        color: $updateServicesClearButton;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken($updateServicesErrorColor, 10%);
+        }
+
+        @media (max-width: 480px) {
+          width: 100%;
+          padding: 10px;
+          font-size: 0.875rem;
+        }
+      }
+
+      .updateButton {
+        background-color: $updateServicesSecondaryColor;
+        color: $updateServicesUpdateButton;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: lighten($updateServicesSecondaryColor, 10%);
+        }
+
+        @media (max-width: 480px) {
+          width: 100%;
+          padding: 10px;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}

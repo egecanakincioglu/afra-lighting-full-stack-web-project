@@ -1,0 +1,160 @@
+@use "../../variables.scss" as *;
+
+.userContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 1rem;
+
+  @media (max-width: 1024px) {
+    height: auto;
+  }
+  h1 {
+    height: min-content;
+    font-size: 1.8rem;
+    color: $updateUserPrimaryColor;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .innerBox {
+    width: 100%;
+    background-color: $updateUserBoxColor;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px $updateUserShadowColor;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      padding: 2rem;
+      max-width: 500px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 1.5rem;
+      max-width: 100%;
+    }
+
+    .userForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      @media (max-width: 768px) {
+        gap: 1.2rem;
+      }
+
+      @media (max-width: 480px) {
+        gap: 1rem;
+      }
+
+      .inputGroup {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        label {
+          font-size: 1rem;
+          font-weight: bold;
+          color: $updateUserTextColor;
+          margin-bottom: 0.5rem;
+
+          @media (max-width: 768px) {
+            font-size: 0.9rem;
+          }
+
+          @media (max-width: 480px) {
+            font-size: 0.85rem;
+          }
+        }
+
+        input {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1rem;
+          border: 1px solid $updateUserInputBorderColor;
+          border-radius: 8px;
+          background-color: $updateUserInputBg;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            border-color: $updateUserSecondaryColor;
+          }
+
+          @media (max-width: 768px) {
+            padding: 0.9rem;
+            font-size: 0.95rem;
+          }
+
+          @media (max-width: 480px) {
+            padding: 0.8rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+
+    .errorText {
+      color: $updateUserErrorColor;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+
+      @media (max-width: 768px) {
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .successText {
+      color: $updateUserSuccessColor;
+      text-align: center;
+      margin-top: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .updateButton {
+      width: 50%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      background-color: $updateUserSecondaryColor;
+      color: $updateUserUpdateButtonTextColor;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten($updateUserSecondaryColor, 10%);
+      }
+
+      @media (max-width: 768px) {
+        padding: 0.9rem;
+        font-size: 1rem;
+      }
+
+      @media (max-width: 480px) {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

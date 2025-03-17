@@ -1,0 +1,363 @@
+.container {
+  padding: 40px 20px;
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    padding: 20px 10px;
+  }
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 20px auto 40px;
+  max-width: 800px;
+
+  .instruction {
+    display: block;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    animation: pulse 2s infinite;
+
+    @keyframes pulse {
+      0%,
+      100% {
+        opacity: 0.6;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.sliderWrapper {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: #ff7f00;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+
+  &.vertical {
+    height: 600px;
+    scroll-snap-type: y mandatory;
+  }
+}
+
+.beforeImage,
+.afterImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  scroll-snap-align: start;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+}
+
+.handle {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: none;
+  transition: transform 0.2s ease;
+
+  &.horizontalHandle {
+    height: 100%;
+    width: 40px;
+    cursor: col-resize;
+    transform: translateX(-50%);
+  }
+
+  &.verticalHandle {
+    width: 100%;
+    height: 40px;
+    cursor: row-resize;
+    transform: translateY(-50%);
+  }
+
+  &Circle {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #ff7f00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      width: 40px !important;
+      height: 40px !important;
+
+      .handleIcon {
+        width: 30px !important;
+        height: 30px !important;
+      }
+    }
+  }
+
+  &Icon {
+    color: #ff7f00;
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.5px;
+  }
+
+  &:active &Circle {
+    transform: scale(1.2);
+    background: #ff7f00;
+
+    .handleIcon {
+      color: white;
+    }
+  }
+}
+
+.labels {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+
+  span {
+    position: absolute;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: #ff7f00;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 13px !important;
+      padding: 6px 12px !important;
+    }
+  }
+
+  .labelBefore {
+    left: 20px;
+    top: 20px;
+  }
+  .labelAfter {
+    right: 20px;
+    top: 20px;
+  }
+  .labelTop {
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+  }
+  .labelBottom {
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+  }
+}
+
+.projectDetails {
+  margin-top: 30px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+
+  h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 60%;
+      width: 4px;
+      background: #ff7f00;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.4rem !important;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.8;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+
+  button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #f0f0f0;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover:not(:disabled) {
+      background: #ff7f00;
+      color: white;
+    }
+
+    &.activePage {
+      background: #ff7f00;
+      color: white;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 480px) {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    height: 400px;
+
+    &.vertical {
+      height: 500px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    height: 500px;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior: contain;
+
+    &.vertical {
+      height: 70vh;
+    }
+
+    .beforeImage img,
+    .afterImage img {
+      object-position: center;
+    }
+  }
+
+  .handle.verticalHandle {
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 40px;
+  }
+}
+
+@media (min-width: 769px) {
+  .slider {
+    .beforeImage img {
+      object-position: left;
+    }
+    .afterImage img {
+      object-position: right;
+    }
+  }
+
+  .handle.verticalHandle {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 300px;
+
+    &.vertical {
+      height: 400px;
+    }
+  }
+
+  .projectTitle {
+    font-size: 1.2rem;
+  }
+}
+
+.beforeImage,
+.afterImage,
+.handle {
+  transition: clip-path 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease;
+}

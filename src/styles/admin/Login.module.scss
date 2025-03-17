@@ -1,0 +1,124 @@
+@use "../variables.scss" as *;
+
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $loginBackgroundColor;
+}
+
+.loginBox {
+  width: 350px;
+  padding: 2rem;
+  background-color: $loginBoxColor;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px $loginBoxShadowColor;
+  text-align: center;
+  color: $loginTextColor;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .logoContainer {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    color: $loginPrimaryColor;
+  }
+
+  .securityIcon {
+    font-size: 1.5rem;
+    color: $loginButtonColor;
+    margin-bottom: 1.5rem;
+  }
+
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input {
+      padding: 0.75rem;
+      font-size: 1rem;
+      color: $loginTextColor;
+      background-color: $loginInputBackground;
+      border: 1px solid darken($loginInputBackground, 5%);
+      border-radius: 8px;
+
+      &::placeholder {
+        color: darken($loginTextColor, 20%);
+      }
+    }
+
+    button {
+      padding: 0.75rem;
+      font-size: 1.1rem;
+      background-color: $loginButtonColor;
+      color: $loginButton;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten($loginButtonColor, 10%);
+      }
+    }
+
+    .forgotPassword {
+      text-align: right;
+      font-size: 0.875rem;
+      color: $loginPrimaryColor;
+      text-decoration: none;
+      margin-top: 0.5rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: lighten($loginPrimaryColor, 10%);
+      }
+    }
+
+    .error {
+      font-size: 0.875rem;
+      color: $loginErrorColor;
+      margin-top: -0.5rem;
+      text-align: left;
+      padding-left: 0.5rem;
+    }
+
+    .success {
+      font-size: 0.875rem;
+      color: $loginSuccessColor;
+      margin-top: -0.5rem;
+      text-align: left;
+      padding-left: 0.5rem;
+    }
+  }
+
+  .developerCredit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+
+    img {
+      height: 20px;
+    }
+
+    span {
+      font-size: 0.875rem;
+      color: $loginFooterBottomCreditColor;
+    }
+  }
+}

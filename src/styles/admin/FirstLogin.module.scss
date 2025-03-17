@@ -1,0 +1,102 @@
+@use "../variables.scss" as *;
+
+.firstLoginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: $firstLoginBackgroundColor;
+}
+
+.firstLoginBox {
+  width: 450px;
+  padding: 2.5rem;
+  background-color: $firstLoginBoxColor;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px $firstLoginBoxShadowColor;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .logoContainer {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: $firstLoginPrimaryColor;
+  }
+
+  .securityIcon {
+    font-size: 2rem;
+    color: $firstLoginButtonColor;
+    margin-bottom: 1rem;
+  }
+
+  .firstLoginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    input {
+      padding: 1rem;
+      font-size: 1rem;
+      background-color: $firstLoginInputBackground;
+      border: 1px solid darken($firstLoginInputBackground, 5%);
+      border-radius: 10px;
+
+      &::placeholder {
+        color: darken($firstLoginTextColor, 20%);
+      }
+    }
+
+    button {
+      padding: 1rem;
+      font-size: 1.1rem;
+      background-color: $firstLoginButtonColor;
+      color: $firstLoginButton;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: lighten($firstLoginButtonColor, 10%);
+      }
+    }
+
+    .error {
+      font-size: 0.9rem;
+      color: $firstLoginErrorColor;
+      text-align: left;
+    }
+
+    .success {
+      font-size: 1rem;
+      color: $firstLoginSuccessColor;
+      text-align: center;
+    }
+  }
+
+  .developerCredit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+
+    img {
+      height: 24px;
+    }
+
+    span {
+      font-size: 1rem;
+      color: $firstLoginTextColor;
+    }
+  }
+}

@@ -1,0 +1,169 @@
+@use "../../variables.scss" as *;
+
+.errorText {
+  color: $updateContactErrorColor;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+  }
+}
+
+.successText {
+  color: $updateSocialSuccessColor;
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+  }
+}
+
+.socialContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 1rem;
+
+  .innerBox {
+    width: 100%;
+    max-width: 600px;
+    background-color: $updateSocialBoxColor;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px $updateSocialShadowColor;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      padding: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      padding: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: $updateSocialPrimaryColor;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    .infoText {
+      font-size: 1rem;
+      color: $updateSocialTextColor;
+      margin-bottom: 2rem;
+
+      @media (max-width: 768px) {
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+
+      span {
+        display: block;
+        color: $updateSocialSecondaryColor;
+        margin-top: 0.5rem;
+        font-style: italic;
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .socialForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      @media (max-width: 480px) {
+        gap: 1rem;
+      }
+
+      .inputGroup {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        label {
+          font-size: 1rem;
+          font-weight: bold;
+          color: $updateSocialTextColor;
+          margin-bottom: 0.5rem;
+
+          @media (max-width: 768px) {
+            font-size: 0.9rem;
+          }
+
+          @media (max-width: 480px) {
+            font-size: 0.8rem;
+          }
+        }
+
+        input {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1rem;
+          border: 1px solid darken($updateSocialShadowColor, 10%);
+          border-radius: 8px;
+          background-color: lighten($updateSocialBoxColor, 5%);
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            border-color: $updateSocialSecondaryColor;
+          }
+
+          @media (max-width: 768px) {
+            padding: 0.9rem;
+          }
+
+          @media (max-width: 480px) {
+            padding: 0.8rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .updateButton {
+        padding: 1rem;
+        font-size: 1.1rem;
+        background-color: $updateSocialSecondaryColor;
+        color: $updateSocialUpdateButton;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: lighten($updateSocialSecondaryColor, 10%);
+        }
+
+        @media (max-width: 768px) {
+          padding: 0.9rem;
+          font-size: 1rem;
+        }
+
+        @media (max-width: 480px) {
+          padding: 0.8rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

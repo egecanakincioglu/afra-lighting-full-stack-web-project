@@ -1,0 +1,36 @@
++ Anasayfadaki banner bir tane olacak
+  + Upload API'de düzenle
+  + Yönetim panelinde düzenle
++ Favori ürünlerdeki reklamlar bir sıra üste alınacak
++ Linkedin bilgileri WhatsApp bilgileri olarak değiştirilecek 
++ "Misyon" kısmı "Hakkımızda" olarak değiştirilecek
+  + Yönetim panelinde değiştir
++ Favori ürün sayısı 6'ya düşürülecek
+  + Upload API'de düzenle
+  + Yönetim panelinde düzenle
++ İletişim numarası değişecek
++ Ürünler kısmı menü olacak
+  + Kategoriler kısmı gelecek
+    + Kategori sayısını 8 ile sınırlandır
+    + Yönetim panelinden kategori eklenebilecek
+    + Her kategoriye ürün yüklenebilecek
+      + Ürünlerin fotoğrafları değiştirilebilecek
++ Hizmetler kısmının yanına projelerimiz sekmesi eklenecek
+  + Önce/Sonra kısmı içerecek
+  + Yönetim paneline ekle
++ Referanslar kurumsal bölümünün içine eklenecek
+  + Yönetim panelinden düzenlenebilecek
+
+? Favori ürünlerdeki reklamlar onunla eşleşen kategorilerdeki eşleşen kategoriye yönlendirilecek
+? Google indexlenme sorunu çözülecek ve olası HTTP -> HTTPS yönlendirmeleri incelenecek
+? Panelde hangi alanın düzenlendiği görselleşecek
+  
+- Fotoğraflar 500x500 olarak ayarlanacak kategori sistemine yükleme sırasında
+- Projeler kısmında telefonda kaydırma kısmı yatay olacak
+
+?: Üzerinde çalışıldı, yeniden bakılacak
+-: Bitmedi
++: Bitti, kontrol edildi
+
+Not: + Olarak işaretlenen her değişikliğin yönetim panelindeki ilgili kısımlarınında 
+O yüzden bazılarının yönetim paneli kısmı ayrı bir madde olarak daha içeride duruyor ama diğerleri içinde geçerli mesela banner 1 tan
